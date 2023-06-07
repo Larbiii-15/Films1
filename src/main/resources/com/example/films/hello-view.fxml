@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.films.Controller">
+   <children>
+      <Label layoutX="204.0" layoutY="20.0" text="Application de gestion de films" />
+      <TableView fx:id="tabView" layoutX="14.0" layoutY="42.0" prefHeight="200.0" prefWidth="553.0">
+        <columns>
+          <TableColumn fx:id="rangCol" prefWidth="100.0" text="Rang" />
+          <TableColumn fx:id="idCol" prefWidth="96.0" text="Identifient" />
+            <TableColumn fx:id="nomCol" prefWidth="110.0" text="Nom" />
+            <TableColumn fx:id="anneeCol" minWidth="9.0" prefWidth="104.0" text="Année" />
+            <TableColumn fx:id="acteurCol" minWidth="0.0" prefWidth="142.0" text="Acteur" />
+        </columns>
+      </TableView>
+      <GridPane layoutX="14.0" layoutY="256.0" prefHeight="147.0" prefWidth="304.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="LabRang" text="Rang" />
+            <Label fx:id="LabId" text="Identifient" GridPane.rowIndex="1" />
+            <Label fx:id="LabNom" text="Nom" GridPane.rowIndex="2" />
+            <Label fx:id="LabAnn" text="Annee" GridPane.rowIndex="3" />
+            <TextField fx:id="rangField" GridPane.columnIndex="1" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="LabActeur" text="Acteur" GridPane.rowIndex="4" />
+            <TextField fx:id="acteurTxt" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <Button fx:id="ajoutBtn" layoutX="34.0" layoutY="457.0" mnemonicParsing="false" onAction="#ajouterFilm" text="Ajouter" />
+      <Button fx:id="suppBtn" layoutX="204.0" layoutY="457.0" mnemonicParsing="false" onAction="#supprimerFilm" text="Supprimer" />
+      <Button fx:id="viderBtn" layoutX="414.0" layoutY="457.0" mnemonicParsing="false" onAction="#viderTableau" text="Vider" />
+      <Button fx:id="importerBtn" layoutX="515.0" layoutY="457.0" mnemonicParsing="false" onAction="#importer" text="Importer" />
+   </children>
+</AnchorPane>
